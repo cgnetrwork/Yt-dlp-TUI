@@ -1,0 +1,85 @@
+max_concurrent_downloads = 3
+queue_file = "./data/queue.json"
+archive_file = "./data/archive.txt"
+templates_dir = "./templates"
+bin_dir = "./bin"
+
+[output]
+default_save_path = "./downloads"
+default_filename_template = "%(title)s [%(id)s].%(ext)s"
+restrict_filenames = false
+trim_filenames = 0
+write_info_json = false
+write_description = false
+use_mtime = true
+
+[download]
+concurrent_fragments = 1
+rate_limit = ""
+retry_count = 10
+continue_partial = true
+use_download_archive = true
+playlist_items = ""
+min_filesize = ""
+max_filesize = ""
+date_filter = ""
+datebefore = ""
+dateafter = ""
+max_downloads = 0
+sleep_interval = 0.0
+max_sleep_interval = 0.0
+
+[aria2c]
+enabled = true
+connections_per_server = 16
+split_count = 16
+min_split_size = "1M"
+max_concurrent = 5
+
+[ffmpeg]
+remux_video = ""
+recode_video = ""
+audio_format = ""
+audio_quality = ""
+keep_video = false
+split_chapters = false
+force_keyframes = false
+postprocessor_args = ""
+
+[subtitles]
+write_subs = false
+write_auto_subs = false
+sub_langs = "en"
+sub_format = "best"
+embed_subs = false
+convert_subs = ""
+
+[metadata]
+embed_thumbnail = true
+embed_metadata = true
+embed_chapters = false
+write_thumbnail = false
+convert_thumbnails = ""
+parse_metadata = ""
+
+[sponsorblock]
+mark_categories = ""
+remove_categories = ""
+api_url = ""
+
+[network]
+proxy = ""
+impersonate = ""
+cookies_file = ""
+cookies_from_browser = ""
+socket_timeout = 0
+add_headers = ""
+force_ipv4 = false
+force_ipv6 = false
+sleep_requests = 0.0
+
+[advanced]
+update_channel = ""
+geo_bypass = ""
+ignore_errors = false
+verbose = false
